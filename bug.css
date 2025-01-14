@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon error involving the use of the `:has()` pseudo-class with a selector that isn't a direct child:
+
+```css
+.container:has(.target > .element) {
+  background-color: yellow;
+}
+```
+
+This code is expected to target the `.container` element only if it has a child element that contains a `.target` element which, in turn, has a child element called `.element`. However, in certain browsers, this selector will not work as intended. It will not select the `.container` element if the `.element` element is a more distant descendant of the `.target` element.
