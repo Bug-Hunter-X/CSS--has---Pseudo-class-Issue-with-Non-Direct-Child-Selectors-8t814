@@ -1,0 +1,9 @@
+The solution involves changing the selector to explicitly target all descendants using the general descendant combinator (` `):
+
+```css
+.container:has(.target .element) {
+  background-color: yellow;
+}
+```
+
+This revised selector correctly targets the `.container` element regardless of the `.element`'s level of nesting within the `.target` element.  It ensures broader compatibility across different browsers.
